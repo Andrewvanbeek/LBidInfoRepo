@@ -1,0 +1,6 @@
+framework module Pods_luxe {
+  umbrella header "Pods-luxe-umbrella.h"
+
+  export *
+  module * { export * }
+}

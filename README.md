@@ -1,6 +1,15 @@
 # Luxe Concierge App
 
 
+## Installation
+
+1. Download repo
+2. Run 'pod update' in repo from command line
+3. Open project by selecting the 'luxe.xcworkspace' file
+
+
+
+
 ## User Story from Andrew
 
 
@@ -9,7 +18,7 @@ User usecase:  A user has their family coming over but their aparmtent is a comp
 Solution:  User login into Luxe App and through Luxes message text component texts:  “I am heading out could i get someone to clean to my apartment at 3:00, sparkey is location under doormat”.
  
  
-### End User Side -- Flow of this looks like so:
+End User Side -- Flow of this looks like so:
  
 User has signs in with native login, or more likely their gmail or facebook to obtain Oauth token(mostly like since it is a native app users will not log out often if and the token will keep on refreshing to be valid)
  
