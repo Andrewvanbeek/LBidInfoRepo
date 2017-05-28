@@ -53,7 +53,7 @@
                                             <segue destination="FGV-fV-6cG" kind="show" id="g4H-8H-Bvu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFD-zh-99J" userLabel="Register" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFD-zh-99J" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="300" height="40"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -93,7 +93,7 @@
                         <viewControllerLayoutGuide type="top" id="anG-Mc-N6t"/>
                         <viewControllerLayoutGuide type="bottom" id="45R-Cv-i6D"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vWl-vb-wRz" customClass="Register">
+                    <view key="view" contentMode="scaleToFill" id="vWl-vb-wRz" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -205,7 +205,7 @@
                         <viewControllerLayoutGuide type="top" id="EO0-M1-wt0"/>
                         <viewControllerLayoutGuide type="bottom" id="8ag-Xt-dB6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oom-yy-vx6" customClass="Register">
+                    <view key="view" contentMode="scaleToFill" id="oom-yy-vx6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -322,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vL-PJ-4Hj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="131"/>
+            <point key="canvasLocation" x="1022" y="90"/>
         </scene>
         <!--Add Card View Controller-->
         <scene sceneID="ANd-QQ-u1f">
