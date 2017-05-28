@@ -11,6 +11,8 @@ import Stripe
 
 class RegisterScreen: UIViewController, UITextFieldDelegate {
     
+    @IBAction func register(_ sender: Any) {
+    }
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     override func viewDidLoad() {

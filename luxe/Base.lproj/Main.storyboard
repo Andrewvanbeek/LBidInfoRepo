@@ -171,6 +171,9 @@
                                 <state key="normal" title="SUBMIT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="register:" destination="WJ4-yk-tas" eventType="touchUpInside" id="LXj-0q-fQ7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -270,42 +273,46 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlY-rS-d8y" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
-                                <rect key="frame" x="37" y="302" width="300" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="CX5-DH-81W"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="SUBMIT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N16-yl-BHI" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
-                                <rect key="frame" x="38" y="390" width="300" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Lyc-Mo-xcm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Add Card">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="1ZL-uh-I1L" kind="show" id="etH-4R-q4O"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ynn-zy-RNR">
+                                <rect key="frame" x="37" y="302" width="300" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlY-rS-d8y" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="CX5-DH-81W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="SUBMIT">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N16-yl-BHI" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40" width="300" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="Lyc-Mo-xcm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Add Card">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="1ZL-uh-I1L" kind="show" id="etH-4R-q4O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ahx-XI-cY0" firstAttribute="leading" secondItem="oom-yy-vx6" secondAttribute="leadingMargin" id="26X-34-dCo"/>
                             <constraint firstItem="Ahx-XI-cY0" firstAttribute="top" secondItem="EO0-M1-wt0" secondAttribute="bottom" id="E9k-hd-0So"/>
                             <constraint firstItem="u1y-iU-BSz" firstAttribute="top" secondItem="EO0-M1-wt0" secondAttribute="bottom" constant="10" id="Q1z-ZZ-Lum"/>
-                            <constraint firstItem="qlY-rS-d8y" firstAttribute="top" secondItem="Uq7-j9-mEh" secondAttribute="bottom" constant="75" id="QSD-pC-Kmz"/>
                             <constraint firstItem="Uq7-j9-mEh" firstAttribute="top" secondItem="u1y-iU-BSz" secondAttribute="bottom" constant="75" id="WdC-n9-1bd" userLabel="emailPassStack.top = Register.bottom + 175"/>
                             <constraint firstItem="u1y-iU-BSz" firstAttribute="centerX" secondItem="oom-yy-vx6" secondAttribute="centerX" id="XE8-DR-qAM"/>
                             <constraint firstItem="Uq7-j9-mEh" firstAttribute="centerX" secondItem="oom-yy-vx6" secondAttribute="centerX" id="lJa-oS-Wjd"/>
-                            <constraint firstItem="qlY-rS-d8y" firstAttribute="centerX" secondItem="oom-yy-vx6" secondAttribute="centerX" id="mv6-cs-dwd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -337,6 +344,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YNB-9b-jI3"/>
+        <segue reference="qbv-rX-gRz"/>
     </inferredMetricsTieBreakers>
 </document>
