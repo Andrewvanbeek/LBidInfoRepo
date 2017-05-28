@@ -6,6 +6,8 @@ target 'luxe' do
   use_frameworks!
 
   # Pods for luxe
+  pod 'Stripe'
+  pod 'Alamofire'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
