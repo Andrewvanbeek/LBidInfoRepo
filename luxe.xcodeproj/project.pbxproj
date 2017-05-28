@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C85AD0C54C50709192211C0F /* Pods_luxe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03699651A6E33E31D8C4AF7F /* Pods_luxe.framework */; };
+		E424C9251EDA52BF00C204EB /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424C9241EDA52BF00C204EB /* RegisterScreen.swift */; };
 		E49286EF1EDA2F630005F91A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49286EE1EDA2F630005F91A /* HomeScreen.swift */; };
 		E49286F61EDA44A90005F91A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E49286F51EDA44A90005F91A /* GoogleService-Info.plist */; };
 		E4AF1DB01ED7B3CB0002EDE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF1DAF1ED7B3CB0002EDE8 /* AppDelegate.swift */; };
@@ -42,8 +43,9 @@
 		28FCA2926B8B2B1C5B85FFAB /* Pods_luxeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luxeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A74EE995A992FC89A612BA /* Pods_luxeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luxeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AEAC4D853F6387886094E0 /* Pods-luxe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luxe.release.xcconfig"; path = "Pods/Target Support Files/Pods-luxe/Pods-luxe.release.xcconfig"; sourceTree = "<group>"; };
+		E424C9241EDA52BF00C204EB /* RegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		E49286EE1EDA2F630005F91A /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		E49286F51EDA44A90005F91A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E49286F51EDA44A90005F91A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E4AF1DAC1ED7B3CB0002EDE8 /* luxe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luxe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AF1DAF1ED7B3CB0002EDE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4AF1DB11ED7B3CB0002EDE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				E4AF1DB11ED7B3CB0002EDE8 /* ViewController.swift */,
 				E49286EE1EDA2F630005F91A /* HomeScreen.swift */,
+				E424C9241EDA52BF00C204EB /* RegisterScreen.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -116,7 +119,6 @@
 		E4AF1DA31ED7B3CB0002EDE8 = {
 			isa = PBXGroup;
 			children = (
-				E49286F51EDA44A90005F91A /* GoogleService-Info.plist */,
 				E4AF1DAE1ED7B3CB0002EDE8 /* luxe */,
 				E4AF1DC31ED7B3CB0002EDE8 /* luxeTests */,
 				E4AF1DCE1ED7B3CB0002EDE8 /* luxeUITests */,
@@ -145,6 +147,7 @@
 				E4AF1DB61ED7B3CB0002EDE8 /* Assets.xcassets */,
 				E4AF1DB81ED7B3CB0002EDE8 /* LaunchScreen.storyboard */,
 				E4AF1DBB1ED7B3CB0002EDE8 /* Info.plist */,
+				E49286F51EDA44A90005F91A /* GoogleService-Info.plist */,
 			);
 			path = luxe;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E424C9251EDA52BF00C204EB /* RegisterScreen.swift in Sources */,
 				E4AF1DB21ED7B3CB0002EDE8 /* ViewController.swift in Sources */,
 				E4AF1DB01ED7B3CB0002EDE8 /* AppDelegate.swift in Sources */,
 				E49286EF1EDA2F630005F91A /* HomeScreen.swift in Sources */,
