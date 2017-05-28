@@ -8,13 +8,16 @@
 
 import UIKit
 
-class RegisterScreen: UIViewController {
+class RegisterScreen: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.passField.delegate = self
+        self.emailField.delegate = self
+        passField.tag = 1
+        emailField.tag = 0
         var emailPlaceHolder = NSMutableAttributedString()
         let Name  = "Email"
         emailPlaceHolder = NSMutableAttributedString(string:Name, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 22.0)])
@@ -30,15 +33,29 @@ class RegisterScreen: UIViewController {
 
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
-//        self.passField.delegate = self as! UITextFieldDelegate;
-        //self.navigationController?.isNavigationBarHidden = false
-        // Do any additional setup after loading the view, typically from a nib.
+
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
+        if textField == emailField {
+            passField.becomeFirstResponder()
+        } else {
+            passField.resignFirstResponder()
+        }
         return false
     }
+    
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
