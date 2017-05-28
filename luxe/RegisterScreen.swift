@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Stripe
 
 class RegisterScreen: UIViewController, UITextFieldDelegate {
     
@@ -54,6 +55,17 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
         return false
     }
     
+//    func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateToken token: STPToken, completion: STPErrorBlock) {
+//        self.submitTokenToBackend(token, completion: { (error: Error?) in
+//            if let error = error {
+//                completion(error)
+//            } else {
+//                self.dismiss(animated: true, completion: {
+//                    self.showReceiptPage()
+//                    completion(nil)
+//                })
+//            }
+//        })
 
     
     override func didReceiveMemoryWarning() {
