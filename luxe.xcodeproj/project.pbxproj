@@ -20,6 +20,7 @@
 		E4AF1DD01ED7B3CB0002EDE8 /* luxeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF1DCF1ED7B3CB0002EDE8 /* luxeUITests.swift */; };
 		E4E656B91EDB189600CBE30A /* HomeScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E656B81EDB189600CBE30A /* HomeScreenButton.swift */; };
 		E4E656C91EDB7FBF00CBE30A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E656C81EDB7FBF00CBE30A /* User.swift */; };
+		E4E656CC1EDBBDC700CBE30A /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E656CB1EDBBDC700CBE30A /* LoginScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		E4AF1DD11ED7B3CB0002EDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4E656B81EDB189600CBE30A /* HomeScreenButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenButton.swift; sourceTree = "<group>"; };
 		E4E656C81EDB7FBF00CBE30A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E4E656CB1EDBBDC700CBE30A /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				E4E656B81EDB189600CBE30A /* HomeScreenButton.swift */,
 				E49286EE1EDA2F630005F91A /* HomeScreen.swift */,
 				E424C9241EDA52BF00C204EB /* RegisterScreen.swift */,
+				E4E656CB1EDBBDC700CBE30A /* LoginScreen.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				E4AF1DB21ED7B3CB0002EDE8 /* ViewController.swift in Sources */,
 				E4E656C91EDB7FBF00CBE30A /* User.swift in Sources */,
 				E4E656B91EDB189600CBE30A /* HomeScreenButton.swift in Sources */,
+				E4E656CC1EDBBDC700CBE30A /* LoginScreen.swift in Sources */,
 				E4AF1DB01ED7B3CB0002EDE8 /* AppDelegate.swift in Sources */,
 				E49286EF1EDA2F630005F91A /* HomeScreen.swift in Sources */,
 			);

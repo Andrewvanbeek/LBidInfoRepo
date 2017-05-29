@@ -215,6 +215,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KvU-eU-yba" firstAttribute="centerX" secondItem="vWl-vb-wRz" secondAttribute="centerX" id="2Mt-0k-OrM"/>
                             <constraint firstItem="KvU-eU-yba" firstAttribute="centerX" secondItem="vWl-vb-wRz" secondAttribute="centerX" id="5Dp-kt-poM"/>
                             <constraint firstItem="KvU-eU-yba" firstAttribute="top" secondItem="JUa-Ge-mfM" secondAttribute="bottom" constant="40" id="A5q-Gp-mEr"/>
                             <constraint firstItem="JUa-Ge-mfM" firstAttribute="centerX" secondItem="vWl-vb-wRz" secondAttribute="centerX" id="TTh-y9-u1w"/>
@@ -239,7 +240,7 @@
         <!--LoginScreen-->
         <scene sceneID="8JY-b1-Lfh">
             <objects>
-                <viewController id="FGV-fV-6cG" userLabel="LoginScreen" customClass="RegisterScreen" customModule="luxe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FGV-fV-6cG" userLabel="LoginScreen" customClass="LoginScreen" customModule="luxe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EO0-M1-wt0"/>
                         <viewControllerLayoutGuide type="bottom" id="8ag-Xt-dB6"/>
@@ -255,7 +256,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rB4-fl-iER" kind="unwind" unwindAction="unwindToRegisterScreenWithSegue:" id="INf-qI-lkc"/>
+                                    <segue destination="qEs-3F-gyg" kind="unwind" unwindAction="unwindToLoginScreenWithSegue:" id="azq-5l-ao6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1y-iU-BSz">
@@ -265,6 +266,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N16-yl-BHI" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                <rect key="frame" x="37" y="427" width="300" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Lyc-Mo-xcm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Add Card">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1ZL-uh-I1L" kind="show" id="etH-4R-q4O"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Uq7-j9-mEh" userLabel="emailPassStack">
                                 <rect key="frame" x="38" y="132" width="300" height="95"/>
                                 <subviews>
@@ -312,33 +327,31 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ynn-zy-RNR">
-                                <rect key="frame" x="37" y="302" width="300" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AbA-Yj-4ys" userLabel="submitAndErrorStack">
+                                <rect key="frame" x="38" y="237" width="300" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlY-rS-d8y" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhw-dV-1bK" userLabel="loginError">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="OaO-Oz-teq"/>
+                                            <constraint firstAttribute="height" constant="40" id="SN2-1A-qpp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPz-ew-TZ6" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40" width="300" height="40"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="CX5-DH-81W"/>
+                                            <constraint firstAttribute="width" constant="300" id="xzh-2J-1kZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="SUBMIT">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N16-yl-BHI" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40" width="300" height="40"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="Lyc-Mo-xcm"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="Add Card">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
                                         <connections>
-                                            <segue destination="1ZL-uh-I1L" kind="show" id="etH-4R-q4O"/>
+                                            <action selector="login:" destination="FGV-fV-6cG" eventType="touchUpInside" id="DfB-xe-mbK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -348,18 +361,24 @@
                         <constraints>
                             <constraint firstItem="Ahx-XI-cY0" firstAttribute="leading" secondItem="oom-yy-vx6" secondAttribute="leadingMargin" id="26X-34-dCo"/>
                             <constraint firstItem="Ahx-XI-cY0" firstAttribute="top" secondItem="EO0-M1-wt0" secondAttribute="bottom" id="E9k-hd-0So"/>
+                            <constraint firstItem="AbA-Yj-4ys" firstAttribute="centerX" secondItem="oom-yy-vx6" secondAttribute="centerX" id="GhM-IR-t2W"/>
                             <constraint firstItem="u1y-iU-BSz" firstAttribute="top" secondItem="EO0-M1-wt0" secondAttribute="bottom" constant="10" id="Q1z-ZZ-Lum"/>
                             <constraint firstItem="Uq7-j9-mEh" firstAttribute="top" secondItem="u1y-iU-BSz" secondAttribute="bottom" constant="75" id="WdC-n9-1bd" userLabel="emailPassStack.top = Register.bottom + 175"/>
                             <constraint firstItem="u1y-iU-BSz" firstAttribute="centerX" secondItem="oom-yy-vx6" secondAttribute="centerX" id="XE8-DR-qAM"/>
+                            <constraint firstItem="N16-yl-BHI" firstAttribute="centerX" secondItem="oom-yy-vx6" secondAttribute="centerX" id="krr-3p-n1w"/>
                             <constraint firstItem="Uq7-j9-mEh" firstAttribute="centerX" secondItem="oom-yy-vx6" secondAttribute="centerX" id="lJa-oS-Wjd"/>
+                            <constraint firstItem="AbA-Yj-4ys" firstAttribute="top" secondItem="Uq7-j9-mEh" secondAttribute="bottom" constant="10" id="rZi-MQ-tOf"/>
+                            <constraint firstItem="N16-yl-BHI" firstAttribute="top" secondItem="Uq7-j9-mEh" secondAttribute="bottom" constant="200" id="uEm-YI-oJt"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="Wg6-xS-Ysi" id="QTn-g8-4Ny"/>
+                        <outlet property="loginError" destination="lhw-dV-1bK" id="Tpm-2u-rlg"/>
                         <outlet property="passField" destination="mZT-VV-luU" id="UEZ-iT-eKM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vL-PJ-4Hj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qEs-3F-gyg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1022" y="90"/>
         </scene>

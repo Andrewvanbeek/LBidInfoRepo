@@ -14,6 +14,11 @@ class HomeScreen: UIViewController {
         //nothing goes here
     }
     
+    @IBAction func unwindToLoginScreen(segue: UIStoryboardSegue) {
+        //nothing goes here
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.white
