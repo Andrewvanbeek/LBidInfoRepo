@@ -18,7 +18,7 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
 
     @IBAction func register(_ sender: Any) {
         print("registration attempt")
-        if (passwordsMatch()){
+        if (fieldsNotEmpty() && passwordsMatch()){
             Auth.auth().createUser(withEmail: emailField.text!, password: passField.text!)
             { (user, error) in
                 if (error != nil){
@@ -36,8 +36,17 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
         print("Successful Registration")
     }
     
+    func fieldsNotEmpty() -> Bool{
+        if (emailField.text! == "" || passField.text! == ""){
+            self.registrationError.text = "Feilds can't be empty."
+            self.viewDidLoad()
+            return false
+        }
+        return true
+    }
+    
     func passwordsMatch() -> Bool{
-        if (passField.text! != confirmField.text! || passField.text! == ""){
+        if (passField.text! != confirmField.text!){
             self.registrationError.text = "Passwords don't match."
             self.viewDidLoad()
             return false
