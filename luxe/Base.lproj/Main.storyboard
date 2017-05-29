@@ -161,28 +161,43 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0z-X5-qsT" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
-                                <rect key="frame" x="37" y="302.5" width="300" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="h4y-Uv-L7G"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="SUBMIT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="register:" destination="WJ4-yk-tas" eventType="touchUpInside" id="LXj-0q-fQ7"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KvU-eU-yba" userLabel="submitAndErrorStack">
+                                <rect key="frame" x="37" y="267.5" width="300" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOx-yu-39c" userLabel="registrationError">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="5uy-Uj-0yB"/>
+                                            <constraint firstAttribute="height" constant="25" id="ACL-ze-wYk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0z-X5-qsT" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="25" width="300" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="h4y-Uv-L7G"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="SUBMIT">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="register:" destination="WJ4-yk-tas" eventType="touchUpInside" id="LXj-0q-fQ7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KvU-eU-yba" firstAttribute="centerX" secondItem="vWl-vb-wRz" secondAttribute="centerX" id="5Dp-kt-poM"/>
+                            <constraint firstItem="KvU-eU-yba" firstAttribute="top" secondItem="JUa-Ge-mfM" secondAttribute="bottom" constant="40" id="A5q-Gp-mEr"/>
                             <constraint firstItem="JUa-Ge-mfM" firstAttribute="centerX" secondItem="vWl-vb-wRz" secondAttribute="centerX" id="TTh-y9-u1w"/>
                             <constraint firstItem="91j-ff-Smg" firstAttribute="centerX" secondItem="vWl-vb-wRz" secondAttribute="centerX" id="W25-x7-wWU"/>
                             <constraint firstItem="91j-ff-Smg" firstAttribute="top" secondItem="anG-Mc-N6t" secondAttribute="bottom" constant="10" id="aoh-Hc-qP7"/>
-                            <constraint firstItem="G0z-X5-qsT" firstAttribute="centerX" secondItem="vWl-vb-wRz" secondAttribute="centerX" id="bUq-HN-6Ub"/>
-                            <constraint firstItem="G0z-X5-qsT" firstAttribute="top" secondItem="JUa-Ge-mfM" secondAttribute="bottom" constant="75" id="gcm-5E-qiA"/>
                             <constraint firstItem="4gj-KO-PJb" firstAttribute="leading" secondItem="vWl-vb-wRz" secondAttribute="leadingMargin" id="hk1-CT-n9P"/>
                             <constraint firstItem="JUa-Ge-mfM" firstAttribute="top" secondItem="91j-ff-Smg" secondAttribute="bottom" constant="75" id="q9e-SI-V2m" userLabel="emailPassStack.top = Register.bottom + 175"/>
                             <constraint firstItem="4gj-KO-PJb" firstAttribute="top" secondItem="anG-Mc-N6t" secondAttribute="bottom" id="ynQ-Av-9hH"/>
@@ -191,6 +206,7 @@
                     <connections>
                         <outlet property="emailField" destination="lBY-Aa-Uak" id="8xn-wu-jet"/>
                         <outlet property="passField" destination="zqX-S2-hXA" id="dKW-8O-5vS"/>
+                        <outlet property="registrationError" destination="GOx-yu-39c" id="ht8-xZ-LOA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBt-hW-iCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

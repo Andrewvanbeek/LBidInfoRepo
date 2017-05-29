@@ -16,15 +16,5 @@ public class User {
 //    init(email: String) {
 //        self.email = email
 //    }
-//    
-    class func register(email: String, password: String){
-        if (email != "" && password != ""){
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            
-        }
-        }
-    }
-    
-    
-    
+
 }
