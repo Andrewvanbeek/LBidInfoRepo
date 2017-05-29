@@ -37,7 +37,7 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
     }
     
     func passwordsMatch() -> Bool{
-        if (passField.text! != confirmField.text!){
+        if (passField.text! != confirmField.text! || passField.text! == ""){
             self.registrationError.text = "Passwords don't match."
             self.viewDidLoad()
             return false

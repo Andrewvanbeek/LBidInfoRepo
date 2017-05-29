@@ -61,7 +61,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="WJ4-yk-tas" kind="show" id="3cT-bM-9rW"/>
+                                            <segue destination="WJ4-yk-tas" kind="showDetail" action="showViewController:sender:" id="3cT-bM-9rW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -104,7 +104,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="qbv-rX-gRz"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="qbv-rX-gRz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91j-ff-Smg">
