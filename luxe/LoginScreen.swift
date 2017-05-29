@@ -16,19 +16,26 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginError: UILabel!
    
     @IBAction func login(_ sender: Any) {
-        Auth.auth().signIn(withEmail: emailField.text!, password: passField.text!) { (user, error) in
-            if (error != nil){
-                self.loginError.text = error?.localizedDescription ?? "Some kind of login error"
-                print("login error:" + (error?.localizedDescription)!)
-                self.viewDidLoad()
-            }else{
-//                print("user info:" + user.debugDescription)
-//                print("user uid:" + (user?.uid)!)
-//                print("user email:" + (user?.email)!)
-//                print(user?.isEmailVerified ?? <#default value#>)
-                self.loginSuccess()
+        if(fieldsNotEmpty()){
+            Auth.auth().signIn(withEmail: emailField.text!, password: passField.text!) { (user, error) in
+                if (error != nil){
+                    self.loginError.text = error?.localizedDescription ?? "Some kind of login error"
+                    print("login error:" + (error?.localizedDescription)!)
+                    self.viewDidLoad()
+                }else{
+                    self.loginSuccess()
+                }
             }
         }
+    }
+    
+    func fieldsNotEmpty() -> Bool{
+        if (emailField.text! == "" || passField.text! == ""){
+            self.loginError.text = "Feilds can't be empty."
+            self.viewDidLoad()
+            return false
+        }
+        return true
     }
     
     func loginSuccess(){
