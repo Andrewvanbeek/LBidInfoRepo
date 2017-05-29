@@ -40,8 +40,9 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     
     func loginSuccess(){
         print("Successful login")
-        //self.storyboard?.instantiateViewController(withIdentifier: "UserNavController")
-        self.present(UserNavController(), animated: true, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = storyBoard.instantiateViewController(withIdentifier: "UserNavController") as! UserNavController
+        self.show(navigationController, sender: nil)
     }
     
     override func viewDidLoad() {

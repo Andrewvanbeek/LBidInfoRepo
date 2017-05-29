@@ -400,5 +400,65 @@
             </objects>
             <point key="canvasLocation" x="2930" y="740"/>
         </scene>
+        <!--User Nav Controller-->
+        <scene sceneID="NCS-sc-NT5">
+            <objects>
+                <navigationController storyboardIdentifier="UserNavController" id="RHk-98-lML" customClass="UserNavController" customModule="luxe" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2cg-0A-hhH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vOR-RY-vSP" kind="relationship" relationship="rootViewController" id="Ynu-ue-QDF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpp-ie-QH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3862" y="894"/>
+        </scene>
+        <!--User Screen-->
+        <scene sceneID="b93-N6-iap">
+            <objects>
+                <viewController storyboardIdentifier="UserScreen" title="User Screen" id="vOR-RY-vSP" customClass="UserScreen" customModule="luxe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="loD-ZQ-ItH"/>
+                        <viewControllerLayoutGuide type="bottom" id="fTP-RD-caF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gut-9M-nDu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-fa-QAc" userLabel="profileMenu">
+                                <rect key="frame" x="0.0" y="64" width="175" height="603"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="3uy-fA-byn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NeQ-fa-QAc" secondAttribute="bottom" id="7fu-hl-rsX"/>
+                            <constraint firstItem="NeQ-fa-QAc" firstAttribute="leading" secondItem="Gut-9M-nDu" secondAttribute="leading" id="cK9-tZ-ZhQ"/>
+                            <constraint firstItem="NeQ-fa-QAc" firstAttribute="top" secondItem="loD-ZQ-ItH" secondAttribute="bottom" id="g6T-Xi-kTT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="LUXE" id="P9G-5H-9qz">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="nN2-uZ-Jbg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Q0j-kl-p0B">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Profile"/>
+                            </button>
+                            <connections>
+                                <action selector="toggleLeftMenu:" destination="vOR-RY-vSP" id="fpe-iF-xez"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCZ-98-cEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4749.6000000000004" y="893.70314842578716"/>
+        </scene>
     </scenes>
 </document>

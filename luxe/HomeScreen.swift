@@ -22,8 +22,7 @@ class HomeScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.white
-//        self.navigationController?.isNavigationBarHidden = false
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
     
     
@@ -31,9 +30,5 @@ class HomeScreen: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    //    self.navigationController.navigationBar.hidden = YES;
-    //    @IBOutlet var homeScreen: UIView!
-    //    homeScreen.navigationController.navigationBar.hidden = YES;
     
 }

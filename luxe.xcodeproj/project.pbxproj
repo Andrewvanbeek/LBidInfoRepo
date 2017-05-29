@@ -19,7 +19,7 @@
 		E4AF1DC51ED7B3CB0002EDE8 /* luxeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF1DC41ED7B3CB0002EDE8 /* luxeTests.swift */; };
 		E4AF1DD01ED7B3CB0002EDE8 /* luxeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF1DCF1ED7B3CB0002EDE8 /* luxeUITests.swift */; };
 		E4B3A6C91EDC78C500BC5446 /* UserNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B3A6C81EDC78C500BC5446 /* UserNavController.swift */; };
-		E4B3A6CC1EDC79BE00BC5446 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B3A6CB1EDC79BE00BC5446 /* User.storyboard */; };
+		E4B3A6D21EDCB61100BC5446 /* UserScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B3A6D11EDCB61100BC5446 /* UserScreen.swift */; };
 		E4E656B91EDB189600CBE30A /* HomeScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E656B81EDB189600CBE30A /* HomeScreenButton.swift */; };
 		E4E656C91EDB7FBF00CBE30A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E656C81EDB7FBF00CBE30A /* User.swift */; };
 		E4E656CC1EDBBDC700CBE30A /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E656CB1EDBBDC700CBE30A /* LoginScreen.swift */; };
@@ -65,7 +65,7 @@
 		E4AF1DCF1ED7B3CB0002EDE8 /* luxeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luxeUITests.swift; sourceTree = "<group>"; };
 		E4AF1DD11ED7B3CB0002EDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4B3A6C81EDC78C500BC5446 /* UserNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNavController.swift; sourceTree = "<group>"; };
-		E4B3A6CB1EDC79BE00BC5446 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		E4B3A6D11EDCB61100BC5446 /* UserScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserScreen.swift; sourceTree = "<group>"; };
 		E4E656B81EDB189600CBE30A /* HomeScreenButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenButton.swift; sourceTree = "<group>"; };
 		E4E656C81EDB7FBF00CBE30A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E4E656CB1EDBBDC700CBE30A /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -122,6 +122,7 @@
 				E4AF1DB11ED7B3CB0002EDE8 /* ViewController.swift */,
 				E4E656B81EDB189600CBE30A /* HomeScreenButton.swift */,
 				E49286EE1EDA2F630005F91A /* HomeScreen.swift */,
+				E4B3A6D11EDCB61100BC5446 /* UserScreen.swift */,
 				E424C9241EDA52BF00C204EB /* RegisterScreen.swift */,
 				E4B3A6C81EDC78C500BC5446 /* UserNavController.swift */,
 				E4E656CB1EDBBDC700CBE30A /* LoginScreen.swift */,
@@ -155,8 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				E4E656CA1EDB7FC500CBE30A /* Models */,
-				E4B3A6CA1EDC79A900BC5446 /* StoryBoards */,
 				E4AF1DAF1ED7B3CB0002EDE8 /* AppDelegate.swift */,
+				E4AF1DB31ED7B3CB0002EDE8 /* Main.storyboard */,
 				E49286F01EDA2F8B0005F91A /* ViewControllers */,
 				E4AF1DB61ED7B3CB0002EDE8 /* Assets.xcassets */,
 				E4AF1DB81ED7B3CB0002EDE8 /* LaunchScreen.storyboard */,
@@ -182,15 +183,6 @@
 				E4AF1DD11ED7B3CB0002EDE8 /* Info.plist */,
 			);
 			path = luxeUITests;
-			sourceTree = "<group>";
-		};
-		E4B3A6CA1EDC79A900BC5446 /* StoryBoards */ = {
-			isa = PBXGroup;
-			children = (
-				E4AF1DB31ED7B3CB0002EDE8 /* Main.storyboard */,
-				E4B3A6CB1EDC79BE00BC5446 /* User.storyboard */,
-			);
-			name = StoryBoards;
 			sourceTree = "<group>";
 		};
 		E4E656CA1EDB7FC500CBE30A /* Models */ = {
@@ -318,7 +310,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4AF1DBA1ED7B3CB0002EDE8 /* LaunchScreen.storyboard in Resources */,
-				E4B3A6CC1EDC79BE00BC5446 /* User.storyboard in Resources */,
 				E49286F61EDA44A90005F91A /* GoogleService-Info.plist in Resources */,
 				E4AF1DB71ED7B3CB0002EDE8 /* Assets.xcassets in Resources */,
 				E4AF1DB51ED7B3CB0002EDE8 /* Main.storyboard in Resources */,
@@ -396,6 +387,7 @@
 			files = (
 				E424C9251EDA52BF00C204EB /* RegisterScreen.swift in Sources */,
 				E4AF1DB21ED7B3CB0002EDE8 /* ViewController.swift in Sources */,
+				E4B3A6D21EDCB61100BC5446 /* UserScreen.swift in Sources */,
 				E4B3A6C91EDC78C500BC5446 /* UserNavController.swift in Sources */,
 				E4E656C91EDB7FBF00CBE30A /* User.swift in Sources */,
 				E4E656B91EDB189600CBE30A /* HomeScreenButton.swift in Sources */,
