@@ -14,26 +14,42 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registrationError: UILabel!
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var confirmField: UITextField!
 
     @IBAction func register(_ sender: Any) {
-        print("start async register")
-        Auth.auth().createUser(withEmail: passField.text!, password: passField.text!)
-        { (user, error) in
-            if (error != nil){
-                self.registrationError.text = error?.localizedDescription ?? "Some kind of Registration Error"
-                print(error?.localizedDescription ?? "Some kind of Registration Error")
-                self.viewDidLoad()
-            }else{
-                print("Success registering")
+        print("registration attempt")
+        if (passwordsMatch()){
+            Auth.auth().createUser(withEmail: emailField.text!, password: passField.text!)
+            { (user, error) in
+                if (error != nil){
+                    self.registrationError.text = error?.localizedDescription ?? "Some kind of Registration Error"
+                    print("registration error:" + (error?.localizedDescription)!)
+                    self.viewDidLoad()
+                }else{
+                    self.registrationSuccess()
+                }
             }
-            print("finished async")
         }
+    }
+    
+    func registrationSuccess(){
+        print("Successful Registration")
+    }
+    
+    func passwordsMatch() -> Bool{
+        if (passField.text! != confirmField.text!){
+            self.registrationError.text = "Passwords don't match."
+            self.viewDidLoad()
+            return false
+        }
+        return true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.passField.delegate = self
         self.emailField.delegate = self
+        self.confirmField.delegate = self
         passField.tag = 1
         emailField.tag = 0
         var emailPlaceHolder = NSMutableAttributedString()
@@ -42,12 +58,18 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
         emailPlaceHolder.addAttribute(NSForegroundColorAttributeName, value: UIColor.gray, range:NSRange(location:0,length:Name.characters.count))
         emailField.attributedPlaceholder = emailPlaceHolder
         
-        
         var passPlaceHolder = NSMutableAttributedString()
         let passName  = "Password"
         passPlaceHolder = NSMutableAttributedString(string:passName, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 22.0)])
         passPlaceHolder.addAttribute(NSForegroundColorAttributeName, value: UIColor.gray, range:NSRange(location:0,length:passName.characters.count))
         passField.attributedPlaceholder = passPlaceHolder
+        
+        var confirmPassPlaceHolder = NSMutableAttributedString()
+        let confirmPassName  = "Confirm Password"
+        confirmPassPlaceHolder = NSMutableAttributedString(string:confirmPassName, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 22.0)])
+        confirmPassPlaceHolder.addAttribute(NSForegroundColorAttributeName, value: UIColor.gray, range:NSRange(location:0,length:confirmPassName.characters.count))
+        confirmField.attributedPlaceholder = confirmPassPlaceHolder
+
 
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
@@ -66,8 +88,10 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailField {
             passField.becomeFirstResponder()
-        } else {
-            passField.resignFirstResponder()
+        } else if textField == passField {
+            confirmField.becomeFirstResponder()
+        } else if textField == confirmField{
+            confirmField.resignFirstResponder()
         }
         return false
     }
@@ -79,25 +103,5 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
     
 
     
-    //    func registrationSuccess(){
-    //        print("success")
-    //    }
     
-    //    public func registrationFailure(errorMessage: String){
-    //        print("registration failure from register screen class")
-    ////        self.registrationError.text! = errorMessage
-    ////        viewDidLoad(<#RegisterScreen#>)
-    //    }
-    
-    //    func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateToken token: STPToken, completion: STPErrorBlock) {
-    //        self.submitTokenToBackend(token, completion: { (error: Error?) in
-    //            if let error = error {
-    //                completion(error)
-    //            } else {
-    //                self.dismiss(animated: true, completion: {
-    //                    self.showReceiptPage()
-    //                    completion(nil)
-    //                })
-    //            }
-    //        })
 }

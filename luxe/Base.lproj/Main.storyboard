@@ -115,7 +115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="JUa-Ge-mfM" userLabel="emailPassStack">
-                                <rect key="frame" x="38" y="132.5" width="300" height="95"/>
+                                <rect key="frame" x="38" y="132.5" width="300" height="161"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="enm-Ih-HWO" userLabel="emailStack">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="29"/>
@@ -145,7 +145,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsW-6p-grv">
                                                 <rect key="frame" x="0.0" y="24" width="300" height="2"/>
@@ -159,10 +159,31 @@
                                             <constraint firstAttribute="width" constant="300" id="q8l-f9-j3P"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2et-2R-USE" userLabel="passConfrimStack">
+                                        <rect key="frame" x="0.0" y="135" width="300" height="26"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Twe-8R-fYv" userLabel="confirmPass">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPK-lp-YX4">
+                                                <rect key="frame" x="0.0" y="24" width="300" height="2"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="OwL-HJ-Rgi"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="0bg-zK-Dgo"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KvU-eU-yba" userLabel="submitAndErrorStack">
-                                <rect key="frame" x="37" y="267.5" width="300" height="65"/>
+                                <rect key="frame" x="37" y="333.5" width="300" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOx-yu-39c" userLabel="registrationError">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="25"/>
@@ -204,6 +225,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmField" destination="Twe-8R-fYv" id="moB-6J-ft8"/>
                         <outlet property="emailField" destination="lBY-Aa-Uak" id="8xn-wu-jet"/>
                         <outlet property="passField" destination="zqX-S2-hXA" id="dKW-8O-5vS"/>
                         <outlet property="registrationError" destination="GOx-yu-39c" id="ht8-xZ-LOA"/>
