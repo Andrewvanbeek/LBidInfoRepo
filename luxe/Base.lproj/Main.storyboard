@@ -266,20 +266,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N16-yl-BHI" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
-                                <rect key="frame" x="37" y="425" width="300" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Lyc-Mo-xcm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                <state key="normal" title="Add Card">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="1ZL-uh-I1L" kind="show" id="etH-4R-q4O"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Uq7-j9-mEh" userLabel="emailPassStack">
                                 <rect key="frame" x="38" y="132" width="300" height="93"/>
                                 <subviews>
@@ -374,10 +360,8 @@
                             <constraint firstItem="u1y-iU-BSz" firstAttribute="top" secondItem="EO0-M1-wt0" secondAttribute="bottom" constant="10" id="Q1z-ZZ-Lum"/>
                             <constraint firstItem="Uq7-j9-mEh" firstAttribute="top" secondItem="u1y-iU-BSz" secondAttribute="bottom" constant="75" id="WdC-n9-1bd" userLabel="emailPassStack.top = Register.bottom + 175"/>
                             <constraint firstItem="u1y-iU-BSz" firstAttribute="centerX" secondItem="oom-yy-vx6" secondAttribute="centerX" id="XE8-DR-qAM"/>
-                            <constraint firstItem="N16-yl-BHI" firstAttribute="centerX" secondItem="oom-yy-vx6" secondAttribute="centerX" id="krr-3p-n1w"/>
                             <constraint firstItem="Uq7-j9-mEh" firstAttribute="centerX" secondItem="oom-yy-vx6" secondAttribute="centerX" id="lJa-oS-Wjd"/>
                             <constraint firstItem="AbA-Yj-4ys" firstAttribute="top" secondItem="Uq7-j9-mEh" secondAttribute="bottom" constant="10" id="rZi-MQ-tOf"/>
-                            <constraint firstItem="N16-yl-BHI" firstAttribute="top" secondItem="Uq7-j9-mEh" secondAttribute="bottom" constant="200" id="uEm-YI-oJt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -407,7 +391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5l-od-hnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2930" y="740"/>
+            <point key="canvasLocation" x="2889" y="111"/>
         </scene>
         <!--User Nav Controller-->
         <scene sceneID="NCS-sc-NT5">
@@ -424,7 +408,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpp-ie-QH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3862" y="894"/>
+            <point key="canvasLocation" x="2889" y="793"/>
         </scene>
         <!--User Screen-->
         <scene sceneID="b93-N6-iap">
@@ -456,6 +440,9 @@
                                                 <state key="normal" title="Update Payment Info">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="1ZL-uh-I1L" kind="show" id="k0p-NW-SoC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiB-Sw-HuJ" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="29" width="250" height="30"/>
@@ -489,6 +476,11 @@
                                     <constraint firstItem="PSD-qk-r9q" firstAttribute="leading" secondItem="NeQ-fa-QAc" secondAttribute="leading" id="nad-4A-UDA"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V7-1g-P4e">
+                                <rect key="frame" x="164" y="469" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -515,11 +507,15 @@
                     <connections>
                         <outlet property="profileMenuLeftEdge" destination="cK9-tZ-ZhQ" id="erN-7m-9xB"/>
                         <outlet property="profileMenuWidth" destination="3uy-fA-byn" id="LRu-Rw-tc8"/>
+                        <segue destination="1ZL-uh-I1L" kind="show" id="0tz-pR-37g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCZ-98-cEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4749.6000000000004" y="893.70314842578716"/>
+            <point key="canvasLocation" x="3756" y="793"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="k0p-NW-SoC"/>
+    </inferredMetricsTieBreakers>
 </document>
