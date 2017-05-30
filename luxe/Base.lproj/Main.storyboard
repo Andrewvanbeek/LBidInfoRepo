@@ -356,6 +356,15 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOd-Ch-fSF">
+                                <rect key="frame" x="67" y="505" width="241" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="skipLogin:" destination="FGV-fV-6cG" eventType="touchUpInside" id="4kV-cO-zw7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -380,7 +389,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vL-PJ-4Hj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="qEs-3F-gyg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1966" y="425"/>
+            <point key="canvasLocation" x="1965.5999999999999" y="424.13793103448279"/>
         </scene>
         <!--Add Card View Controller-->
         <scene sceneID="ANd-QQ-u1f">
@@ -407,6 +416,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2cg-0A-hhH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="vOR-RY-vSP" kind="relationship" relationship="rootViewController" id="Ynu-ue-QDF"/>
@@ -428,33 +438,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TESTTESTTESTTESTTESTTESTTEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtS-V6-D4N">
+                                <rect key="frame" x="57" y="386" width="287" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-fa-QAc" userLabel="profileMenu">
-                                <rect key="frame" x="0.0" y="64" width="175" height="603"/>
+                                <rect key="frame" x="-250" y="59" width="250" height="608"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PSD-qk-r9q">
+                                        <rect key="frame" x="0.0" y="100" width="250" height="88"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llX-Z9-tcI" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                                <state key="normal" title="Update Payment Info">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiB-Sw-HuJ" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="29" width="250" height="30"/>
+                                                <state key="normal" title="Change User Information">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCM-co-glt" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="58" width="250" height="30"/>
+                                                <state key="normal" title="Contact LUXE">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="llX-Z9-tcI" firstAttribute="leading" secondItem="PSD-qk-r9q" secondAttribute="leading" id="1zi-Ov-xkV"/>
+                                            <constraint firstAttribute="trailing" secondItem="llX-Z9-tcI" secondAttribute="trailing" id="4mG-po-N7A"/>
+                                            <constraint firstItem="WiB-Sw-HuJ" firstAttribute="leading" secondItem="PSD-qk-r9q" secondAttribute="leading" id="UKI-2M-JV3"/>
+                                            <constraint firstItem="cCM-co-glt" firstAttribute="leading" secondItem="PSD-qk-r9q" secondAttribute="leading" id="fRK-Jf-bq8"/>
+                                            <constraint firstAttribute="trailing" secondItem="cCM-co-glt" secondAttribute="trailing" id="tgr-hP-Ga1"/>
+                                            <constraint firstAttribute="trailing" secondItem="WiB-Sw-HuJ" secondAttribute="trailing" id="u15-p2-Bou"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="3uy-fA-byn"/>
+                                    <constraint firstItem="PSD-qk-r9q" firstAttribute="centerX" secondItem="NeQ-fa-QAc" secondAttribute="centerX" id="0oI-i6-K9e"/>
+                                    <constraint firstAttribute="width" constant="250" id="3uy-fA-byn"/>
+                                    <constraint firstAttribute="trailing" secondItem="PSD-qk-r9q" secondAttribute="trailing" id="L7H-qc-ZGF"/>
+                                    <constraint firstItem="PSD-qk-r9q" firstAttribute="top" secondItem="NeQ-fa-QAc" secondAttribute="top" constant="100" id="cVC-Mo-F1T"/>
+                                    <constraint firstItem="PSD-qk-r9q" firstAttribute="leading" secondItem="NeQ-fa-QAc" secondAttribute="leading" id="nad-4A-UDA"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="NeQ-fa-QAc" secondAttribute="bottom" id="7fu-hl-rsX"/>
-                            <constraint firstItem="NeQ-fa-QAc" firstAttribute="leading" secondItem="Gut-9M-nDu" secondAttribute="leading" id="cK9-tZ-ZhQ"/>
-                            <constraint firstItem="NeQ-fa-QAc" firstAttribute="top" secondItem="loD-ZQ-ItH" secondAttribute="bottom" id="g6T-Xi-kTT"/>
+                            <constraint firstItem="NeQ-fa-QAc" firstAttribute="leading" secondItem="Gut-9M-nDu" secondAttribute="leading" constant="-250" id="cK9-tZ-ZhQ"/>
+                            <constraint firstItem="NeQ-fa-QAc" firstAttribute="top" secondItem="loD-ZQ-ItH" secondAttribute="bottom" constant="-5" id="g6T-Xi-kTT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LUXE" id="P9G-5H-9qz">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="nN2-uZ-Jbg">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="nN2-uZ-Jbg">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Q0j-kl-p0B">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Profile"/>
+                                <connections>
+                                    <action selector="toggleProfileMenu:" destination="vOR-RY-vSP" eventType="touchUpInside" id="Nq4-vS-NoX"/>
+                                </connections>
                             </button>
                             <connections>
-                                <action selector="toggleLeftMenu:" destination="vOR-RY-vSP" id="fpe-iF-xez"/>
+                                <action selector="profileButton:" destination="vOR-RY-vSP" id="KZq-C0-P22"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="profileMenuLeftEdge" destination="cK9-tZ-ZhQ" id="erN-7m-9xB"/>
+                        <outlet property="profileMenuWidth" destination="3uy-fA-byn" id="LRu-Rw-tc8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCZ-98-cEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

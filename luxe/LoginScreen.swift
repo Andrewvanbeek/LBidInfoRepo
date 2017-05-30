@@ -15,6 +15,9 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var loginError: UILabel!
    
+    @IBAction func skipLogin(_ sender: Any) {
+        self.loginSuccess()
+    }
     @IBAction func login(_ sender: Any) {
         if(fieldsNotEmpty()){
             Auth.auth().signIn(withEmail: emailField.text!, password: passField.text!) { (user, error) in

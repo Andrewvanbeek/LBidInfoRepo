@@ -9,24 +9,20 @@
 import UIKit
 
 class UserScreen: UIViewController {
-    
-//    @IBOutlet weak var profileMenuConstraint: NSLayoutConstraint!
-//    @IBOutlet weak var profileMenuWidth: NSLayoutConstraint!
-    
-    @IBAction func toggleLeftMenu(_ sender: Any) {
-        print("hello mate")
-//        print(profileMenuConstraint)
-//        if(profileMenuConstraint.constant < 0){
-//            profileMenuConstraint.constant = 0
-//            viewDidLoad()
-//        } else {
-//            profileMenuConstraint.constant = -profileMenuWidth.constant
-//            viewDidLoad()
-//        }
+
+    @IBOutlet weak var profileMenuWidth: NSLayoutConstraint!
+    @IBOutlet weak var profileMenuLeftEdge: NSLayoutConstraint!
+    @IBAction func toggleProfileMenu(_ sender: Any) {
+        if(profileMenuLeftEdge.constant < 0){
+            profileMenuLeftEdge.constant = 0
+            viewDidLoad()
+        } else {
+            profileMenuLeftEdge.constant = -profileMenuWidth.constant
+            viewDidLoad()
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-//        profileMenuConstraint.constant = -profileMenuWidth.constant
 
     }
     
