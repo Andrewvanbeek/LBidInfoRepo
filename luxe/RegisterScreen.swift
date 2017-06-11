@@ -59,31 +59,37 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.passField.delegate = self
         self.emailField.delegate = self
         self.confirmField.delegate = self
+        
         passField.tag = 1
         emailField.tag = 0
+        
         var emailPlaceHolder = NSMutableAttributedString()
         let Name  = "Email"
+        
         emailPlaceHolder = NSMutableAttributedString(string:Name, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 22.0)])
         emailPlaceHolder.addAttribute(NSForegroundColorAttributeName, value: UIColor.gray, range:NSRange(location:0,length:Name.characters.count))
         emailField.attributedPlaceholder = emailPlaceHolder
         
         var passPlaceHolder = NSMutableAttributedString()
         let passName  = "Password"
+        
         passPlaceHolder = NSMutableAttributedString(string:passName, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 22.0)])
         passPlaceHolder.addAttribute(NSForegroundColorAttributeName, value: UIColor.gray, range:NSRange(location:0,length:passName.characters.count))
+        
         passField.attributedPlaceholder = passPlaceHolder
         
         var confirmPassPlaceHolder = NSMutableAttributedString()
         let confirmPassName  = "Confirm Password"
+        
         confirmPassPlaceHolder = NSMutableAttributedString(string:confirmPassName, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 22.0)])
         confirmPassPlaceHolder.addAttribute(NSForegroundColorAttributeName, value: UIColor.gray, range:NSRange(location:0,length:confirmPassName.characters.count))
+        
         confirmField.attributedPlaceholder = confirmPassPlaceHolder
 
-
-        
         self.navigationController?.navigationBar.tintColor = UIColor.white
 
     }
