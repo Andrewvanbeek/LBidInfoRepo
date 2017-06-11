@@ -34,6 +34,9 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
     
     func registrationSuccess(){
         print("Successful Registration")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginScreen") as! LoginScreen
+        self.show(viewController, sender: nil)
     }
     
     func fieldsNotEmpty() -> Bool{
