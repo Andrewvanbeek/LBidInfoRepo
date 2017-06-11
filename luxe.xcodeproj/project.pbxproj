@@ -551,6 +551,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F742228E1D0A6122AAFD98F /* Pods-luxe.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LS7MT9FAWB;
 				INFOPLIST_FILE = luxe/Info.plist;
@@ -565,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C5AEAC4D853F6387886094E0 /* Pods-luxe.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LS7MT9FAWB;
 				INFOPLIST_FILE = luxe/Info.plist;
