@@ -23,6 +23,7 @@
 		E4E656B91EDB189600CBE30A /* HomeScreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E656B81EDB189600CBE30A /* HomeScreenButton.swift */; };
 		E4E656C91EDB7FBF00CBE30A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E656C81EDB7FBF00CBE30A /* User.swift */; };
 		E4E656CC1EDBBDC700CBE30A /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E656CB1EDBBDC700CBE30A /* LoginScreen.swift */; };
+		F77DB1321EEDA01400F59CB4 /* MultipageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DB1311EEDA01400F59CB4 /* MultipageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		E4E656B81EDB189600CBE30A /* HomeScreenButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenButton.swift; sourceTree = "<group>"; };
 		E4E656C81EDB7FBF00CBE30A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E4E656CB1EDBBDC700CBE30A /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		F77DB1311EEDA01400F59CB4 /* MultipageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				E424C9241EDA52BF00C204EB /* RegisterScreen.swift */,
 				E4B3A6C81EDC78C500BC5446 /* UserNavController.swift */,
 				E4E656CB1EDBBDC700CBE30A /* LoginScreen.swift */,
+				F77DB1311EEDA01400F59CB4 /* MultipageViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				E4E656CC1EDBBDC700CBE30A /* LoginScreen.swift in Sources */,
 				E4AF1DB01ED7B3CB0002EDE8 /* AppDelegate.swift in Sources */,
 				E49286EF1EDA2F630005F91A /* HomeScreen.swift in Sources */,
+				F77DB1321EEDA01400F59CB4 /* MultipageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
