@@ -26,6 +26,14 @@ class UserScreen: UIViewController {
 
     }
     
+    @IBAction func logoutUser(_ sender: Any) {
+        User.logOutUser{ (status) in
+            if status == true {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

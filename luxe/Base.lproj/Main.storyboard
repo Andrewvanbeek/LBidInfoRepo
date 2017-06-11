@@ -13,7 +13,7 @@
         <!--Home Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeScreen" customModule="luxe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome" id="BYZ-38-t0r" customClass="HomeScreen" customModule="luxe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -494,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5l-od-hnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3404" y="96"/>
+            <point key="canvasLocation" x="2708" y="48"/>
         </scene>
         <!--User Nav Controller-->
         <scene sceneID="NCS-sc-NT5">
@@ -511,7 +511,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpp-ie-QH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3284" y="899"/>
+            <point key="canvasLocation" x="2708" y="942"/>
         </scene>
         <!--User Screen-->
         <scene sceneID="b93-N6-iap">
@@ -535,8 +535,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-fa-QAc" userLabel="profileMenu">
                                 <rect key="frame" x="-250" y="59" width="250" height="608"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PSD-qk-r9q">
-                                        <rect key="frame" x="0.0" y="100" width="250" height="88"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PSD-qk-r9q">
+                                        <rect key="frame" x="0.0" y="106" width="250" height="117"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llX-Z9-tcI" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
@@ -553,11 +553,22 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9K-dt-Da6" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
+                                                <rect key="frame" x="99" y="58" width="52" height="30"/>
+                                                <state key="normal" title="Log out"/>
+                                                <connections>
+                                                    <action selector="logoutUser:" destination="vOR-RY-vSP" eventType="touchUpInside" id="1X4-8j-Net"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="3z4-tt-qmb"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCM-co-glt" customClass="HomeScreenButton" customModule="luxe" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="58" width="250" height="30"/>
+                                                <rect key="frame" x="0.0" y="87" width="250" height="30"/>
                                                 <state key="normal" title="Contact LUXE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="foy-77-bPJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -605,15 +616,14 @@
                     <connections>
                         <outlet property="profileMenuLeftEdge" destination="cK9-tZ-ZhQ" id="erN-7m-9xB"/>
                         <outlet property="profileMenuWidth" destination="3uy-fA-byn" id="LRu-Rw-tc8"/>
-                        <segue destination="1ZL-uh-I1L" kind="show" id="0tz-pR-37g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCZ-98-cEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4014" y="759"/>
+            <point key="canvasLocation" x="3505" y="640"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k0p-NW-SoC"/>
+        <segue reference="foy-77-bPJ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -26,6 +26,8 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
                     print("login error:" + (error?.localizedDescription)!)
                     self.viewDidLoad()
                 }else{
+                    let userInfo = ["email": self.emailField.text!, "password": self.passField.text!]
+                    UserDefaults.standard.set(userInfo, forKey: "userInformation")
                     self.loginSuccess()
                 }
             }
