@@ -15,7 +15,14 @@ class UserScreen: UIViewController {
     @IBOutlet weak var profileMenuWidth: NSLayoutConstraint!
     @IBOutlet weak var profileMenuLeftEdge: NSLayoutConstraint!
     
+    @IBAction func touchedChatInputTextField(_ sender: Any) {
+        print("touched chat input text field")
+        chatInputBottomMargin.constant = 400
+        print(chatInputBottomMargin.constant)
+    }
+    
     @IBAction func toggleProfileMenu(_ sender: Any) {
+        print("toggling")
         if(profileMenuLeftEdge.constant < 0){
             profileMenuLeftEdge.constant = 0
             viewDidLoad()
@@ -25,25 +32,21 @@ class UserScreen: UIViewController {
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == chatTextField {
-            chatTextField.resignFirstResponder
-        }
-        return false
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        chatInputBottomMargin.constant = 200
-        viewDidLoad()
+        textField.resignFirstResponder()
         return true
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let customView = UIView(frame: CGRectMake(0, 0, 10, 100))
+        customView.backgroundColor = UIColor.redColor()
+        textField.inputAccessoryView = customView
 
     }
     

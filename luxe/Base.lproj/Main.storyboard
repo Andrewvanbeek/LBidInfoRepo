@@ -92,7 +92,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="D8u-yW-3jj" customClass="MultipageViewController" customModule="luxe" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qm-4v-9M1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="1553"/>
+            <point key="canvasLocation" x="1022" y="1561"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZEa-OM-ebV">
@@ -123,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPr-38-Lig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="1552"/>
+            <point key="canvasLocation" x="2079" y="1552"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QaN-60-f5c">
@@ -195,7 +195,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAr-oC-lob" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8JD-7u-erE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3562" y="1551"/>
+            <point key="canvasLocation" x="3283" y="1561"/>
         </scene>
         <!--RegisterScreen-->
         <scene sceneID="0EF-pU-Vy6">
@@ -476,7 +476,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vL-PJ-4Hj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="qEs-3F-gyg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="793"/>
+            <point key="canvasLocation" x="2079" y="793"/>
         </scene>
         <!--Add Card View Controller-->
         <scene sceneID="ANd-QQ-u1f">
@@ -494,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5l-od-hnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3561" y="24"/>
+            <point key="canvasLocation" x="4534" y="793"/>
         </scene>
         <!--User Nav Controller-->
         <scene sceneID="NCS-sc-NT5">
@@ -511,7 +511,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpp-ie-QH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3561" y="793"/>
+            <point key="canvasLocation" x="3283" y="793"/>
         </scene>
         <!--User Screen-->
         <scene sceneID="b93-N6-iap">
@@ -538,6 +538,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="touchedChatInputTextField:" destination="vOR-RY-vSP" eventType="editingDidEnd" id="qUZ-ry-hLA"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvn-CY-kCf">
                                         <rect key="frame" x="345" y="0.0" width="30" height="30"/>
@@ -628,7 +631,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCZ-98-cEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4464.8000000000002" y="792.95352323838085"/>
+            <point key="canvasLocation" x="3897" y="793"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
