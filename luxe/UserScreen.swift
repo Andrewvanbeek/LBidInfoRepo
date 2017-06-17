@@ -44,9 +44,6 @@ class UserScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let customView = UIView(frame: CGRectMake(0, 0, 10, 100))
-        customView.backgroundColor = UIColor.redColor()
-        textField.inputAccessoryView = customView
 
     }
     
