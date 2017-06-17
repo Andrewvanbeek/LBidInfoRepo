@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import FacebookLogin
 
-class HomeScreen: UIViewController {
+class HomeScreen: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBAction func unwindToRegisterScreen(segue: UIStoryboardSegue) {
         //nothing goes here
@@ -22,7 +24,13 @@ class HomeScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.white
-
+        //facebook login
+        
+        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+        view.addSubview(loginButton)
+        loginButton.frame = CGRect(x: 16, y: 500, width: view.frame.width - 32, height: 50)
+        
+       
     }
     
     func pushTo()  {
@@ -44,7 +52,13 @@ class HomeScreen: UIViewController {
                     weakSelf = nil
                 }
             })
-        } 
+        }
+        if((FBSDKAccessToken.current()) != nil){
+            print("YEAH!---------------------------------------")
+            self.pushTo()
+        }
+
+        
     }
 
     
@@ -52,5 +66,18 @@ class HomeScreen: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Did log out of facebook")
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil {
+            print("Yakakaaaa")
+            return
+        }
+        
+                
     }
 }

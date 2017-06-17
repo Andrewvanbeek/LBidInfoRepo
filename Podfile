@@ -11,6 +11,8 @@ target 'luxe' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
 
 #  target 'luxeTests' do
 #    inherit! :search_paths
