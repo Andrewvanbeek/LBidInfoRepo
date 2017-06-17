@@ -13,7 +13,6 @@
 		E49286F61EDA44A90005F91A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E49286F51EDA44A90005F91A /* GoogleService-Info.plist */; };
 		E4AF1DB01ED7B3CB0002EDE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF1DAF1ED7B3CB0002EDE8 /* AppDelegate.swift */; };
 		E4AF1DB21ED7B3CB0002EDE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF1DB11ED7B3CB0002EDE8 /* ViewController.swift */; };
-		E4AF1DB51ED7B3CB0002EDE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4AF1DB31ED7B3CB0002EDE8 /* Main.storyboard */; };
 		E4AF1DB71ED7B3CB0002EDE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AF1DB61ED7B3CB0002EDE8 /* Assets.xcassets */; };
 		E4AF1DBA1ED7B3CB0002EDE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4AF1DB81ED7B3CB0002EDE8 /* LaunchScreen.storyboard */; };
 		E4AF1DC51ED7B3CB0002EDE8 /* luxeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF1DC41ED7B3CB0002EDE8 /* luxeTests.swift */; };
@@ -55,7 +54,6 @@
 		E4AF1DAC1ED7B3CB0002EDE8 /* luxe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luxe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AF1DAF1ED7B3CB0002EDE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4AF1DB11ED7B3CB0002EDE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E4AF1DB41ED7B3CB0002EDE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4AF1DB61ED7B3CB0002EDE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4AF1DB91ED7B3CB0002EDE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4AF1DBB1ED7B3CB0002EDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 			children = (
 				E4E656CA1EDB7FC500CBE30A /* Models */,
 				E4AF1DAF1ED7B3CB0002EDE8 /* AppDelegate.swift */,
-				E4AF1DB31ED7B3CB0002EDE8 /* Main.storyboard */,
 				E49286F01EDA2F8B0005F91A /* ViewControllers */,
 				E4AF1DB61ED7B3CB0002EDE8 /* Assets.xcassets */,
 				E4AF1DB81ED7B3CB0002EDE8 /* LaunchScreen.storyboard */,
@@ -315,7 +312,6 @@
 				E4AF1DBA1ED7B3CB0002EDE8 /* LaunchScreen.storyboard in Resources */,
 				E49286F61EDA44A90005F91A /* GoogleService-Info.plist in Resources */,
 				E4AF1DB71ED7B3CB0002EDE8 /* Assets.xcassets in Resources */,
-				E4AF1DB51ED7B3CB0002EDE8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,14 +429,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E4AF1DB31ED7B3CB0002EDE8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4AF1DB41ED7B3CB0002EDE8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E4AF1DB81ED7B3CB0002EDE8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
