@@ -10,6 +10,8 @@ import UIKit
 import FBSDKLoginKit
 import FacebookLogin
 
+var accessTokenValue = String()
+
 class HomeScreen: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBAction func unwindToRegisterScreen(segue: UIStoryboardSegue) {
@@ -25,11 +27,11 @@ class HomeScreen: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.white
         //facebook login
-        
-        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+        let loginButton  = FBSDKLoginButton()
         view.addSubview(loginButton)
-        loginButton.frame = CGRect(x: 16, y: 500, width: view.frame.width - 32, height: 50)
-        
+        loginButton.center = view.center
+        loginButton.delegate = self;
+        loginButton.readPermissions = ["email","public_profile"]
        
     }
     
@@ -37,6 +39,8 @@ class HomeScreen: UIViewController, FBSDKLoginButtonDelegate {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "UserNavController")
             self.present(vc!, animated: false, completion: nil)
     }
+    
+  
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,6 +57,7 @@ class HomeScreen: UIViewController, FBSDKLoginButtonDelegate {
                 }
             })
         }
+       
         if((FBSDKAccessToken.current()) != nil){
             print("YEAH!---------------------------------------")
             self.pushTo()
@@ -73,9 +78,17 @@ class HomeScreen: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        if error != nil {
-            print("Yakakaaaa")
+        if error == nil {
+            print(FBSDKAccessToken.current())
+            FBSDKAccessToken.current().userID
+            print("here")
+            self.performSegue(withIdentifier: "fbLogin", sender: nil)
             return
+        } else {
+            print("##############################################################################")
+            print(error)
+            print("##############################################################################")
+
         }
         
                 

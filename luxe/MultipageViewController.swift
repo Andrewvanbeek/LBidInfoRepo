@@ -14,7 +14,8 @@ class MultipageViewController: UIPageViewController {
         // The view controllers will be shown in this order
         return [self.newInfoViewController(info: "Manage"),
                 self.newInfoViewController(info: "Track"),
-                self.newInfoViewController(info: "Rate")]
+                self.newInfoViewController(info: "Rate"),
+                self.newInfoViewController(info: "Chat")]
     }()
     
     private func newInfoViewController(info: String) -> UIViewController {

@@ -13,6 +13,10 @@ target 'luxe' do
   pod 'Firebase/Storage'
   pod 'FacebookCore'
   pod 'FacebookLogin'
+pod 'SlackTextViewController'
+pod 'TwilioChatClient'
+ pod 'Material', '~> 2.6'
+
 
 #  target 'luxeTests' do
 #    inherit! :search_paths

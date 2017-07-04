@@ -3,14 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		935FB6FE1F0834E900F4AEA1 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935FB6FD1F0834E900F4AEA1 /* MessageModel.swift */; };
+		935FB7001F08352E00F4AEA1 /* ConciergeSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935FB6FF1F08352E00F4AEA1 /* ConciergeSwift.swift */; };
+		935FB71B1F087DEE00F4AEA1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935FB71A1F087DEE00F4AEA1 /* Utils.swift */; };
+		935FB7301F097B4100F4AEA1 /* messagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935FB72F1F097B4000F4AEA1 /* messagesCell.swift */; };
+		935FB7341F09886900F4AEA1 /* GoogleService-Infox.plist in Resources */ = {isa = PBXBuildFile; fileRef = 935FB7331F09886900F4AEA1 /* GoogleService-Infox.plist */; };
+		935FB7361F09889100F4AEA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 935FB7351F09889100F4AEA1 /* GoogleService-Info.plist */; };
+		935FB73A1F09D09400F4AEA1 /* luxebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 935FB7391F09D09300F4AEA1 /* luxebg.png */; };
+		935FB73C1F09D2D600F4AEA1 /* bookingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935FB73B1F09D2D500F4AEA1 /* bookingCellView.swift */; };
+		935FB73E1F0A033600F4AEA1 /* payment.png in Resources */ = {isa = PBXBuildFile; fileRef = 935FB73D1F0A033600F4AEA1 /* payment.png */; };
+		935FB7401F0B220600F4AEA1 /* booking.png in Resources */ = {isa = PBXBuildFile; fileRef = 935FB73F1F0B220500F4AEA1 /* booking.png */; };
+		938430191F0B36B600A8DF58 /* tableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938430181F0B36B600A8DF58 /* tableHeader.swift */; };
 		C85AD0C54C50709192211C0F /* Pods_luxe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03699651A6E33E31D8C4AF7F /* Pods_luxe.framework */; };
 		E424C9251EDA52BF00C204EB /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424C9241EDA52BF00C204EB /* RegisterScreen.swift */; };
 		E49286EF1EDA2F630005F91A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49286EE1EDA2F630005F91A /* HomeScreen.swift */; };
-		E49286F61EDA44A90005F91A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E49286F51EDA44A90005F91A /* GoogleService-Info.plist */; };
 		E4AF1DB01ED7B3CB0002EDE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF1DAF1ED7B3CB0002EDE8 /* AppDelegate.swift */; };
 		E4AF1DB21ED7B3CB0002EDE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF1DB11ED7B3CB0002EDE8 /* ViewController.swift */; };
 		E4AF1DB71ED7B3CB0002EDE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AF1DB61ED7B3CB0002EDE8 /* Assets.xcassets */; };
@@ -43,15 +53,39 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		935FB7191F08387300F4AEA1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		03699651A6E33E31D8C4AF7F /* Pods_luxe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luxe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F742228E1D0A6122AAFD98F /* Pods-luxe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luxe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-luxe/Pods-luxe.debug.xcconfig"; sourceTree = "<group>"; };
 		28FCA2926B8B2B1C5B85FFAB /* Pods_luxeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luxeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A74EE995A992FC89A612BA /* Pods_luxeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luxeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		935FB6D81F080BDE00F4AEA1 /* luxe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = luxe.entitlements; sourceTree = "<group>"; };
+		935FB6FD1F0834E900F4AEA1 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		935FB6FF1F08352E00F4AEA1 /* ConciergeSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConciergeSwift.swift; sourceTree = "<group>"; };
+		935FB71A1F087DEE00F4AEA1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		935FB72F1F097B4000F4AEA1 /* messagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messagesCell.swift; sourceTree = "<group>"; };
+		935FB7331F09886900F4AEA1 /* GoogleService-Infox.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Infox.plist"; sourceTree = SOURCE_ROOT; };
+		935FB7351F09889100F4AEA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		935FB7391F09D09300F4AEA1 /* luxebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = luxebg.png; path = ../../../../Downloads/luxebg.png; sourceTree = "<group>"; };
+		935FB73B1F09D2D500F4AEA1 /* bookingCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookingCellView.swift; sourceTree = "<group>"; };
+		935FB73D1F0A033600F4AEA1 /* payment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = payment.png; path = ../../../../Downloads/payment.png; sourceTree = "<group>"; };
+		935FB73F1F0B220500F4AEA1 /* booking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = booking.png; path = ../../../../Downloads/booking.png; sourceTree = "<group>"; };
+		938430181F0B36B600A8DF58 /* tableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableHeader.swift; sourceTree = "<group>"; };
 		C5AEAC4D853F6387886094E0 /* Pods-luxe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luxe.release.xcconfig"; path = "Pods/Target Support Files/Pods-luxe/Pods-luxe.release.xcconfig"; sourceTree = "<group>"; };
 		E424C9241EDA52BF00C204EB /* RegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		E49286EE1EDA2F630005F91A /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		E49286F51EDA44A90005F91A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E4AF1DAC1ED7B3CB0002EDE8 /* luxe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luxe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AF1DAF1ED7B3CB0002EDE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4AF1DB11ED7B3CB0002EDE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,12 +157,17 @@
 			children = (
 				E4AF1DB11ED7B3CB0002EDE8 /* ViewController.swift */,
 				E4E656B81EDB189600CBE30A /* HomeScreenButton.swift */,
+				938430181F0B36B600A8DF58 /* tableHeader.swift */,
 				E49286EE1EDA2F630005F91A /* HomeScreen.swift */,
 				E4B3A6D11EDCB61100BC5446 /* UserScreen.swift */,
+				935FB73B1F09D2D500F4AEA1 /* bookingCellView.swift */,
 				E424C9241EDA52BF00C204EB /* RegisterScreen.swift */,
 				E4B3A6C81EDC78C500BC5446 /* UserNavController.swift */,
 				E4E656CB1EDBBDC700CBE30A /* LoginScreen.swift */,
 				F77DB1311EEDA01400F59CB4 /* MultipageViewController.swift */,
+				935FB6FF1F08352E00F4AEA1 /* ConciergeSwift.swift */,
+				935FB72F1F097B4000F4AEA1 /* messagesCell.swift */,
+				935FB71A1F087DEE00F4AEA1 /* Utils.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -158,6 +197,7 @@
 		E4AF1DAE1ED7B3CB0002EDE8 /* luxe */ = {
 			isa = PBXGroup;
 			children = (
+				935FB6D81F080BDE00F4AEA1 /* luxe.entitlements */,
 				E4E656CA1EDB7FC500CBE30A /* Models */,
 				E4AF1DAF1ED7B3CB0002EDE8 /* AppDelegate.swift */,
 				F77DB1351EF5B14000F59CB4 /* Main.storyboard */,
@@ -165,7 +205,11 @@
 				E4AF1DB61ED7B3CB0002EDE8 /* Assets.xcassets */,
 				E4AF1DB81ED7B3CB0002EDE8 /* LaunchScreen.storyboard */,
 				E4AF1DBB1ED7B3CB0002EDE8 /* Info.plist */,
-				E49286F51EDA44A90005F91A /* GoogleService-Info.plist */,
+				935FB7351F09889100F4AEA1 /* GoogleService-Info.plist */,
+				935FB7331F09886900F4AEA1 /* GoogleService-Infox.plist */,
+				935FB73D1F0A033600F4AEA1 /* payment.png */,
+				935FB73F1F0B220500F4AEA1 /* booking.png */,
+				935FB7391F09D09300F4AEA1 /* luxebg.png */,
 			);
 			path = luxe;
 			sourceTree = "<group>";
@@ -192,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				E4E656C81EDB7FBF00CBE30A /* User.swift */,
+				935FB6FD1F0834E900F4AEA1 /* MessageModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -209,6 +254,7 @@
 				E4AF1DAA1ED7B3CB0002EDE8 /* Resources */,
 				CAD2BC950673AD77E0C824C7 /* [CP] Embed Pods Frameworks */,
 				BD5B1974BED41FC5C7B74D77 /* [CP] Copy Pods Resources */,
+				935FB7191F08387300F4AEA1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -264,7 +310,7 @@
 				KnownAssetTags = (
 					0,
 				);
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Luxe;
 				TargetAttributes = {
@@ -272,6 +318,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = LS7MT9FAWB;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					E4AF1DBF1ED7B3CB0002EDE8 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -288,7 +339,7 @@
 				};
 			};
 			buildConfigurationList = E4AF1DA71ED7B3CB0002EDE8 /* Build configuration list for PBXProject "luxe" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -314,8 +365,12 @@
 			files = (
 				E4AF1DBA1ED7B3CB0002EDE8 /* LaunchScreen.storyboard in Resources */,
 				F77DB1371EF5B14000F59CB4 /* Main.storyboard in Resources */,
-				E49286F61EDA44A90005F91A /* GoogleService-Info.plist in Resources */,
+				935FB73A1F09D09400F4AEA1 /* luxebg.png in Resources */,
+				935FB7341F09886900F4AEA1 /* GoogleService-Infox.plist in Resources */,
 				E4AF1DB71ED7B3CB0002EDE8 /* Assets.xcassets in Resources */,
+				935FB73E1F0A033600F4AEA1 /* payment.png in Resources */,
+				935FB7361F09889100F4AEA1 /* GoogleService-Info.plist in Resources */,
+				935FB7401F0B220600F4AEA1 /* booking.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,15 +444,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E424C9251EDA52BF00C204EB /* RegisterScreen.swift in Sources */,
+				935FB7301F097B4100F4AEA1 /* messagesCell.swift in Sources */,
 				E4AF1DB21ED7B3CB0002EDE8 /* ViewController.swift in Sources */,
 				E4B3A6D21EDCB61100BC5446 /* UserScreen.swift in Sources */,
 				E4B3A6C91EDC78C500BC5446 /* UserNavController.swift in Sources */,
 				E4E656C91EDB7FBF00CBE30A /* User.swift in Sources */,
+				935FB71B1F087DEE00F4AEA1 /* Utils.swift in Sources */,
 				E4E656B91EDB189600CBE30A /* HomeScreenButton.swift in Sources */,
 				E4E656CC1EDBBDC700CBE30A /* LoginScreen.swift in Sources */,
 				E4AF1DB01ED7B3CB0002EDE8 /* AppDelegate.swift in Sources */,
+				935FB6FE1F0834E900F4AEA1 /* MessageModel.swift in Sources */,
 				E49286EF1EDA2F630005F91A /* HomeScreen.swift in Sources */,
+				935FB73C1F09D2D600F4AEA1 /* bookingCellView.swift in Sources */,
+				938430191F0B36B600A8DF58 /* tableHeader.swift in Sources */,
 				F77DB1321EEDA01400F59CB4 /* MultipageViewController.swift in Sources */,
+				935FB7001F08352E00F4AEA1 /* ConciergeSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,12 +612,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F742228E1D0A6122AAFD98F /* Pods-luxe.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = luxe/luxe.entitlements;
 				DEVELOPMENT_TEAM = LS7MT9FAWB;
 				INFOPLIST_FILE = luxe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = luxe.luxe;
+				PRODUCT_BUNDLE_IDENTIFIER = luxe.luxeclean;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -566,12 +628,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C5AEAC4D853F6387886094E0 /* Pods-luxe.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = luxe/luxe.entitlements;
 				DEVELOPMENT_TEAM = LS7MT9FAWB;
 				INFOPLIST_FILE = luxe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = luxe.luxe;
+				PRODUCT_BUNDLE_IDENTIFIER = luxe.luxeclean;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

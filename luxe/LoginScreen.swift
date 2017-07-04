@@ -1,11 +1,3 @@
-//
-//  LoginScreen.swift
-//  luxe
-//
-//  Created by Matthew Ramuta on 5/28/17.
-//  Copyright © 2017 Luxe. All rights reserved.
-//
-
 import UIKit
 import Stripe
 import Firebase
@@ -14,7 +6,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var loginError: UILabel!
-   
+    
     @IBAction func skipLogin(_ sender: Any) {
         self.loginSuccess()
     }

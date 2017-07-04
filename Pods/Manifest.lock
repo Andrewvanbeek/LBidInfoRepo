@@ -59,7 +59,12 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.10)
+  - Material (2.6.3):
+    - Material/Core (= 2.6.3)
+  - Material/Core (2.6.3)
+  - SlackTextViewController (1.9.5)
   - Stripe (10.1.0)
+  - TwilioChatClient (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -68,7 +73,10 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
+  - Material (~> 2.6)
+  - SlackTextViewController
   - Stripe
+  - TwilioChatClient
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -86,8 +94,11 @@ SPEC CHECKSUMS:
   FirebaseStorage: 8110a1ed2034c8fbfd83890d2acc9cdbbd99afec
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
+  Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
+  SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
   Stripe: 1c7aa951a075cced500a919d92b687b35d410705
+  TwilioChatClient: fa4185745d6082631b47107bc304d83e43c2aff8
 
-PODFILE CHECKSUM: 800b89aa5d1b2a5a449b52bb8345bce2fcd49bb9
+PODFILE CHECKSUM: 1b4d68de1cac2807180dcdfdf30959a75a2570df
 
 COCOAPODS: 1.2.1
